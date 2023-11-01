@@ -2,7 +2,6 @@
 using ErrorOr;
 using MediatR;
 using PubCrawlDec2023.Core;
-using PubCrawlDec2023.Core.Repo;
 using PubCrawlDec2023.Dare.Repo;
 
 namespace PubCrawlDec2023.Dare.Commands;
