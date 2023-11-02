@@ -1,9 +1,9 @@
 ﻿using ErrorOr;
-using PubCrawlDec2023.Core;
-using PubCrawlDec2023.Core.Errors;
-using PubCrawlDec2023.Dare.Repo;
+using PubCrawl.Core;
+using PubCrawl.Core.Errors;
+using PubCrawl.Dare.Repo;
 
-namespace PubCrawlDec2023.Dare;
+namespace PubCrawl.Dare;
 
 public class DareValidator : IValidator<DareDataModel>
 {

@@ -1,10 +1,10 @@
 ﻿
 using ErrorOr;
 using MediatR;
-using PubCrawlDec2023.Core;
-using PubCrawlDec2023.Dare.Repo;
+using PubCrawl.Core;
+using PubCrawl.Dare.Repo;
 
-namespace PubCrawlDec2023.Dare.Commands;
+namespace PubCrawl.Dare.Commands;
 
 public record UpsertDareCommand(string DareID, string DareName, int Score, string Image) : IRequest<ErrorOr<DareDataModel>>;
 

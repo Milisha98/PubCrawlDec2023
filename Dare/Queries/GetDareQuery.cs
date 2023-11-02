@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using PubCrawlDec2023.Dare.Repo;
+using PubCrawl.Dare.Repo;
 
-namespace PubCrawlDec2023.Dare.Queries;
+namespace PubCrawl.Dare.Queries;
 
 public record GetDareQuery(string DareID) : IRequest<DareDataModel?>;
 

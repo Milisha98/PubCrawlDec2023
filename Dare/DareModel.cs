@@ -1,4 +1,4 @@
-﻿namespace PubCrawlDec2023.Dare;
+﻿namespace PubCrawl.Dare;
 
 public class DareModel
 {

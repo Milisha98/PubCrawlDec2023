@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using PubCrawlMarch23.Core.Repo;
 
-namespace PubCrawlDec2023.Dare.Repo;
+namespace PubCrawl.Dare.Repo;
 
 public class DareWriteRepo : WriteBase<DareDataModel>
 {

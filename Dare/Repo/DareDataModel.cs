@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
-using PubCrawlDec2023.Core.Repo;
+using PubCrawl.Core.Repo;
 
-namespace PubCrawlDec2023.Dare.Repo;
+namespace PubCrawl.Dare.Repo;
 
 public record DareDataModel : IDataModel
 {

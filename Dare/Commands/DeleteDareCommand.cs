@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using PubCrawlDec2023.Dare.Repo;
+using PubCrawl.Dare.Repo;
 
-namespace PubCrawlDec2023.Dare.Commands;
+namespace PubCrawl.Dare.Commands;
 
 public record DeleteDareCommand(string DareId) : IRequest<bool>;
 

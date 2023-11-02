@@ -1,7 +1,7 @@
 ﻿using ErrorOr;
 using MongoDB.Bson.Serialization.Conventions;
 
-namespace PubCrawlDec2023.Core.Errors;
+namespace PubCrawl.Core.Errors;
 
 public static partial class Errors
 {

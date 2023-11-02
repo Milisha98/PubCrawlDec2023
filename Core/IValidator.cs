@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
 
-namespace PubCrawlDec2023.Core;
+namespace PubCrawl.Core;
 
 public interface IValidator<T>
 {

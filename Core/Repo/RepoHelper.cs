@@ -1,4 +1,4 @@
-﻿namespace PubCrawlDec2023.Core.Repo;
+﻿namespace PubCrawl.Core.Repo;
 
 public static class RepoHelper
 {
