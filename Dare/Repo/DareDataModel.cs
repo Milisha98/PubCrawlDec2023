@@ -1,15 +1,14 @@
 ﻿using MediatR;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization.IdGenerators;
 using PubCrawlDec2023.Core.Repo;
 
 namespace PubCrawlDec2023.Dare.Repo;
 
-public record DareDTO : IDTO
+public record DareDataModel : IDataModel
 {
     // Constructor
-    public DareDTO(string dareID, string dareName, int score, string image)
+    public DareDataModel(string? dareID, string dareName, int score, string image)
     {
         Id = dareID;
         DareName = dareName;
@@ -18,9 +17,10 @@ public record DareDTO : IDTO
     }
 
     // Properties
-    [BsonId(IdGenerator = typeof(StringObjectIdGenerator))]
+    [BsonId]
     [BsonElement("_id")]
-    public string Id { get; init; }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? Id { get; init; }
 
     [BsonElement("DareName")]
     public string DareName { get; init; }

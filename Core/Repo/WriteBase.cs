@@ -3,7 +3,7 @@ using PubCrawlDec2023.Core.Repo;
 
 namespace PubCrawlMarch23.Core.Repo;
 
-public abstract class WriteBase<T> where T: IDTO
+public abstract class WriteBase<T> where T: IDataModel
 {
 	private readonly IMongoDatabase _dbConn;
 	private readonly string			_collection;

@@ -2,8 +2,8 @@
 
 namespace PubCrawlDec2023.Core.Repo
 {
-    public interface IDTO
+    public interface IDataModel
     {
-        public string Id { get; }
+        public string? Id { get; }
     }
 }

@@ -5,9 +5,9 @@ using PubCrawlDec2023.Dare.Repo;
 
 namespace PubCrawlDec2023.Dare;
 
-public class DareValidator : IValidator<DareDTO>
+public class DareValidator : IValidator<DareDataModel>
 {
-    public IEnumerable<Error> Validate(DareDTO dare)
+    public IEnumerable<Error> Validate(DareDataModel dare)
     {
         if (string.IsNullOrWhiteSpace(dare.DareName)) yield return Errors.Dare.Validation.DareNameRequired;
         if (string.IsNullOrWhiteSpace(dare.Image)) yield return Errors.Dare.Validation.ImageRequired;
