@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using PubCrawl.Core.Repo;
 
-namespace PubCrawlMarch23.Core.Repo;
+namespace PubCrawl.Core.Repo;
 
 public class ReadBase<T>
 {

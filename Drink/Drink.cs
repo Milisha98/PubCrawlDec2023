@@ -1,6 +1,6 @@
 ﻿namespace PubCrawl.Drinks;
 
-public record Drink(DrinkEnum code, string Name, int Points);
+public record Drink(DrinkEnum Code, string Name, int Points);
 
 public enum DrinkEnum
 {
@@ -9,4 +9,4 @@ public enum DrinkEnum
     Wine,
     Sprit,
     Cocktail
-};s
+};

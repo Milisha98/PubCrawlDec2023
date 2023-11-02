@@ -4,5 +4,5 @@ namespace PubCrawl.Core;
 
 public interface IValidator<T>
 {
-    IEnumerable<Error> Validate(T value);
+    Task<List<Error>> ValidateAsync(T value, bool doDuplicateCheck);
 }
