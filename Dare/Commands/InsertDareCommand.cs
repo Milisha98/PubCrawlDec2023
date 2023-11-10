@@ -21,7 +21,7 @@ public class InsertDareHandler : IRequestHandler<InsertDareCommand, ErrorOr<Dare
     public async Task<ErrorOr<DareDataModel>> Handle(InsertDareCommand request, CancellationToken cancellationToken)
     {
         var dare = new DareDataModel(null, request.DareName, request.Score, request.Image);
-        var validation = await _validator.ValidateAsync(dare, true);
+        var validation = await _validator.ValidateAsync(dare);
         if (validation.Any())
         {
             return validation;

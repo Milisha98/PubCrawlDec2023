@@ -15,14 +15,12 @@ public class DareValidator : IValidator<DareDataModel>
         _mediator = mediator;
     }
 
-    public async Task<List<Error>> ValidateAsync(DareDataModel dare, bool doDuplicateCheck)
+    public async Task<List<Error>> ValidateAsync(DareDataModel dare)
     {
         var errors = Validate(dare).ToList();
-        if (doDuplicateCheck)
-        {
-            var list = await _mediator.Send(new ListDaresQuery());
-            if (list?.Any(x => x.DareName.Trim().ToLower() == dare.DareName?.Trim().ToLower()) ?? false) errors.Add(Errors.Dare.Validation.DuplicateDareName);
-        }
+        var list = await _mediator.Send(new ListDaresQuery());
+        if (list?.Any(x => x.DareName.Trim().ToLower() == dare.DareName?.Trim().ToLower()) ?? false) errors.Add(Errors.Dare.Validation.DuplicateDareName);
+
         return errors;
 
     }

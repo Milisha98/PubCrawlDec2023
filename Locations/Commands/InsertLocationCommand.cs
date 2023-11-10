@@ -1,6 +1,5 @@
 ﻿using ErrorOr;
 using MediatR;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using PubCrawl.Core;
 using PubCrawl.Locations.Queries;
 using PubCrawl.Locations.Repo;
@@ -29,7 +28,7 @@ public class InsertLocationHandler : IRequestHandler<InsertLocationCommand, Erro
 
         // Validate
         var location = new LocationDataModel(null, sequence, request.Name, true);
-        var validation = await _validator.ValidateAsync(location, true);
+        var validation = await _validator.ValidateAsync(location);
         if (validation.Any())
         {
             return validation;

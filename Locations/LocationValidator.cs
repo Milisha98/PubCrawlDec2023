@@ -15,14 +15,11 @@ public class LocationValidator : IValidator<LocationDataModel>
         _mediator = mediator;
     }
 
-    public async Task<List<Error>> ValidateAsync(LocationDataModel location, bool doDuplicateCheck)
+    public async Task<List<Error>> ValidateAsync(LocationDataModel location)
     {
         var errors = Validate(location).ToList();
-        if (doDuplicateCheck)
-        {
-            var list = await _mediator.Send(new ListLocationsQuery());
-            if (list?.Any(x => x.LocationName.Trim().ToLower() == location.LocationName?.Trim().ToLower()) ?? false) errors.Add(Errors.Location.Validation.DuplicateLocationName);
-        }
+        var list = await _mediator.Send(new ListLocationsQuery());
+        if (list?.Any(x => x.LocationName.Trim().ToLower() == location.LocationName?.Trim().ToLower()) ?? false) errors.Add(Errors.Location.Validation.DuplicateLocationName);
         return errors;
     }
 

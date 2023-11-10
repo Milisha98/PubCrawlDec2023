@@ -23,7 +23,7 @@ public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, Erro
     {
         var Location = new LocationDataModel(request.LocationID, request.Sequence, request.Name, request.IsActive);
 
-        var validation = await _validator.ValidateAsync(Location, false);
+        var validation = await _validator.ValidateAsync(Location);
         if (validation.Any()) 
         { 
             return validation;

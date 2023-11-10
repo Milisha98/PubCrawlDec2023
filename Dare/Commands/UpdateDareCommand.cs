@@ -22,7 +22,7 @@ public class UpdateDareHandler : IRequestHandler<UpdateDareCommand, ErrorOr<Dare
     public async Task<ErrorOr<DareDataModel>> Handle(UpdateDareCommand request, CancellationToken cancellationToken)
     {
         var dare = new DareDataModel(request.DareID, request.DareName, request.Score, request.Image);
-        var validation = await _validator.ValidateAsync(dare, false);
+        var validation = await _validator.ValidateAsync(dare);
         if (validation.Any()) 
         { 
             return validation;
