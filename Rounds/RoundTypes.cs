@@ -3,6 +3,5 @@ using PubCrawl.Users.Repo;
 
 namespace PubCrawl.Rounds;
 
-public record RoundID(Guid ID);
-public record RoundTypes(RoundID RoundId, LocationDataModel Location, bool IsActive);
-public record Verses(RoundID RoundId, UserDataModel Player1, UserDataModel Player2);
+public record RoundTypes(int RoundID, LocationDataModel Location, bool IsActive);
+public record Verses(int RoundId, UserDataModel Player1, UserDataModel Player2);
